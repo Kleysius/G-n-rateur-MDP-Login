@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Styles pour le corps de la page */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #1D5D6C;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Styles pour la section de description */
+.container {
+    display: flex;
+    padding: 5% 10% 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.img {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    height: 550px;
+}
+
+.text {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text h2 {
+    color: #1D5D6C;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text p {
+    font-size: 18px;
+}
+
+/* Styles pour la section de redirection */
+.redirect {
+    background-color: #E0DCD9;
+    padding: 4% 8%;
+    text-align: center;
+}
+
+.redirect h2 {
+    color: #1D5D6C;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.redirect p {
+    font-size: 18px;
+}
+
+.redirect button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1D5D6C;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.redirect button:hover {
+    background-color: #173940;
+}
