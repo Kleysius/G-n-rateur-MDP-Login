@@ -9,6 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/style/dashboard.css">
     <title>Tableau de bord</title>
 </head>
@@ -31,8 +32,8 @@ session_start();
             <style id='thumbStyle'>
                 #slider::-webkit-slider-thumb {
                     border: none;
-                    height: 24px;
-                    width: 24px;
+                    height: 26px;
+                    width: 26px;
                     border-radius: 25px;
                     background: #24c266;
                     cursor: pointer;
@@ -42,29 +43,29 @@ session_start();
             <div class="container">
                 <input value="" id="password" disabled="disabled">
                 <br>
-                <label for="slider" class="labelSlider">Longueur <input type="text" value="16" maxlength="2" id="display-password-length" disabled="disabled" oninput="document.getElementById('slider').value=this.value"></label>
-                <br>
+                <label for="slider" class="labelSlider">Longueur du mot de passe<input type="text" value="16" maxlength="2" id="display-password-length" disabled="disabled" oninput="document.getElementById('slider').value=this.value"></label>
+
                 <input type="range" id="slider" name="slider" step="1" value="16" min="4" max="30" oninput="document.getElementById('display-password-length').value=this.value">
 
                 <div class="check">
                     <div class="setting">
-                        <label for="uppercase">A-Z</label>
-                        <input type="checkbox" id="uppercase" name="uppercase" checked>
+                        <label for="uppercase">A - Z</label>
+                        <input type="checkbox" class="option-input" id="uppercase" name="uppercase" checked>
                     </div>
                     <div class="setting">
-                        <label for="lowercase">a-z</label>
-                        <input type="checkbox" id="lowercase" name="lowercase" checked>
+                        <label for="lowercase">a - z</label>
+                        <input type="checkbox" class="option-input" id="lowercase" name="lowercase" checked>
                     </div>
                     <div class="setting">
-                        <label for="numbers">0-9⁭</label>
-                        <input type="checkbox" id="numbers" name="numbers" checked>
+                        <label for="numbers">0 - 9⁭</label>
+                        <input type="checkbox" class="option-input" id="numbers" name="numbers" checked>
                     </div>
                     <div class="setting">
                         <label for="symbols">Symboles</label>
-                        <input type="checkbox" id="symbols" name="symbols" checked>
+                        <input type="checkbox" class="option-input" id="symbols" name="symbols" checked>
                     </div>
                 </div>
-                <button type="submit" onclick="generate()">Générer</button>
+                <button type="submit" id="generateBtn" onclick="generate()">Générer</button>
                 <button type="submit" id="copy" onclick="copyPassword()">Copier</button>
             </div>
         </section>

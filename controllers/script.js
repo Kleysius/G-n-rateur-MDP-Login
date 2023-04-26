@@ -56,6 +56,8 @@ function generate() {
     copyButton.style.background = "#106575";
 }
 
+generate();
+
 function copyPassword() {
     password.select();
     password.setSelectionRange(0, 99999);
@@ -75,17 +77,31 @@ copyButton.addEventListener("click", copyPassword);
 
 let slider = document.getElementById('slider');
 let thumb = document.querySelector("#thumbStyle");
+let sliderColor = document.querySelector("#slider");
 
 slider.addEventListener('input', function () {
     generate();
     let sliderValue = this.value;
     if (sliderValue >= 14) {
+        sliderColor.style.background = "#24c26654";
         thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #24c266;cursor: pointer;-webkit-appearance: none;}'
     } else if (sliderValue < 14 && sliderValue >= 8) {
+        sliderColor.style.background = "#ffa60040";
         thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #FFA500;cursor: pointer;-webkit-appearance: none;}'
 
     } else {
+        sliderColor.style.background = "#ff000041";
         thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #e74c3c;cursor: pointer;-webkit-appearance: none;}'
 
     }
+});
+
+let generateButton = document.getElementById('generateBtn');
+
+generateButton.addEventListener('click', function () {
+    // Générer une couleur aléatoire
+    let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+    // Changer la couleur du bouton
+    generateButton.style.background = randomColor;
 });
