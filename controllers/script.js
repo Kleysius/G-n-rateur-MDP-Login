@@ -7,11 +7,23 @@ let copyButton = document.getElementById("copy");
 
 function generate() {
     let mdp = '';
+    let isChecked = false;
     let tableauxregroupe = [].concat(
         lowercase.checked ? tableauminuscule : [],
         uppercase.checked ? tableaumajuscule : [],
         numbers.checked ? tableaunumero : [],
         symbols.checked ? tableausymbole : []);
+
+    // Vérifiez si au moins une case est cochée
+    if (tableauxregroupe.length > 0) {
+        isChecked = true;
+    }
+
+    // Affichez un message d'erreur si aucune case n'est cochée
+    if (!isChecked) {
+        alert("Veuillez cocher au moins une case pour générer un mot de passe.");
+        return;
+    }
 
     let passwordLength = parseInt(document.getElementById('slider').value);
 
@@ -44,7 +56,6 @@ function generate() {
     copyButton.style.background = "#106575";
 }
 
-
 function copyPassword() {
     password.select();
     password.setSelectionRange(0, 99999);
@@ -69,12 +80,12 @@ slider.addEventListener('input', function () {
     generate();
     let sliderValue = this.value;
     if (sliderValue >= 14) {
-      thumb.textContent='#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #24c266;cursor: pointer;-webkit-appearance: none;}' 
+        thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #24c266;cursor: pointer;-webkit-appearance: none;}'
     } else if (sliderValue < 14 && sliderValue >= 8) {
-        thumb.textContent='#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #FFA500;cursor: pointer;-webkit-appearance: none;}' 
+        thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #FFA500;cursor: pointer;-webkit-appearance: none;}'
 
     } else {
-        thumb.textContent='#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #e74c3c;cursor: pointer;-webkit-appearance: none;}' 
+        thumb.textContent = '#slider::-webkit-slider-thumb {border: none;height: 24px;width: 24px; border-radius: 25px; background: #e74c3c;cursor: pointer;-webkit-appearance: none;}'
 
     }
 });
