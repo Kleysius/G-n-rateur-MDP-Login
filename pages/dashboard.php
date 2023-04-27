@@ -65,6 +65,7 @@ session_start();
                         <input type="checkbox" class="option-input" id="symbols" name="symbols" checked>
                     </div>
                 </div>
+                <div id="warning"></div>
                 <button type="submit" id="generateBtn" onclick="generate()">Générer</button>
                 <button type="submit" id="copy" onclick="copyPassword()">Copier</button>
             </div>

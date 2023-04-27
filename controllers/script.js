@@ -21,8 +21,11 @@ function generate() {
 
     // Affichez un message d'erreur si aucune case n'est cochée
     if (!isChecked) {
-        alert("Veuillez cocher au moins une case pour générer un mot de passe.");
+        let warning = document.getElementById('warning');
+        warning.textContent = "Veuillez cocher au moins une case pour générer un mot de passe.";
         return;
+    } else {
+        warning.textContent = "";
     }
 
     let passwordLength = parseInt(document.getElementById('slider').value);

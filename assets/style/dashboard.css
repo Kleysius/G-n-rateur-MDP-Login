@@ -44,6 +44,10 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 #hero {
     background-color: #f8f8f8;
     padding: 50px 20px;
@@ -51,13 +55,12 @@ nav a {
 }
 
 #hero h1 {
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 20px;
-    color: #106575;
 }
 
 #hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
 }
 
@@ -85,10 +88,11 @@ nav a {
     border-radius: 10px;
     width: 80%;
     letter-spacing: 10px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 label {
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,11 +105,12 @@ label {
     background-color: #cdcdcd;
     padding: 5px 30px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
 }
 
 .check:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .setting {
@@ -143,7 +148,7 @@ label {
     transition: all 0.2s ease-out;
     background: #fff;
     border: none;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: inline-block;
     outline: none;
@@ -156,7 +161,7 @@ label {
 }
 
 .option-input:checked {
-    background: #106575;
+    background: #3cbf5e;
 }
 
 .option-input:checked::before {
@@ -169,7 +174,14 @@ label {
     position: absolute;
     align-items: center;
     justify-content: center;
-    font-family:'Font Awesome 5 Free';
+    font-family: 'Font Awesome 5 Free';
+}
+
+#warning {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 
@@ -205,7 +217,7 @@ label {
 
 #features h2 {
     color: #000;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 40px;
 }
 
@@ -228,16 +240,15 @@ label {
 }
 
 #features li:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 #features .icon {
-    font-size: 48px;
+    font-size: 44px;
 }
 
-
 #features p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0;
 }
 
@@ -250,7 +261,7 @@ label {
 
 #howto h2 {
     color: #000;
-    font-size: 36px;
+    font-size: 34px;
     margin-bottom: 40px;
 }
 
@@ -281,7 +292,7 @@ label {
 }
 
 #howto li:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {

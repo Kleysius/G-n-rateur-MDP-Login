@@ -24,7 +24,7 @@ header h1 {
 /* Styles pour la section de description */
 .container {
     display: flex;
-    padding: 5% 10% 0;
+    padding: 3% 0 0;
     max-width: 1200px;
     margin: auto;
 }
@@ -62,7 +62,7 @@ header h1 {
 /* Styles pour la section de redirection */
 .redirect {
     background-color: #E0DCD9;
-    padding: 4% 8%;
+    padding: 3% 8%;
     text-align: center;
 }
 
