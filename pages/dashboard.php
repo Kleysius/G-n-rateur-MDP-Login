@@ -90,9 +90,9 @@ session_start();
         <section id="howto">
             <h2>Comment ça marche</h2>
             <ol>
-                <li>Réglez la longueur et choisissez les types de caractères que vous voulez inclure.</li>
-                <li>Cliquez sur le bouton "Générer".</li>
-                <li>Copiez le mot de passe généré et utilisez-le pour vos comptes en ligne.</li>
+                <li><p>Réglez la longueur et choisissez les types de caractères que vous voulez inclure.</p></li>
+                <li><p>Cliquez sur le bouton "Générer".</p></li>
+                <li><p>Copiez le mot de passe généré et utilisez-le pour vos comptes en ligne.</p></li>
             </ol>
         </section>
     </main>
