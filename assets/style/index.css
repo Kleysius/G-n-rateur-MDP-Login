@@ -92,3 +92,56 @@ header h1 {
 .redirect button:hover {
     background-color: #173940;
 }
+
+@media (max-width:768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        max-width: 700px;
+    }
+
+    .text h2 {
+        font-size: 26px;
+    }
+
+    .text {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .img img {
+        height: 400px;
+    }
+
+    .redirect {
+        padding: 3% 0;
+    }
+
+    .redirect h2 {
+        font-size: 26px;
+    }
+
+    .redirect p {
+        font-size: 16px;
+        width: 80%;
+        margin: 20px auto;
+
+    }
+
+    .redirect button {
+        font-size: 16px;
+    }
+}
